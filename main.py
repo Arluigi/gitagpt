@@ -59,6 +59,6 @@ if st.session_state["generated"]:
     # Loop through the list of generated outputs in reverse order
     for i in range(len(st.session_state["generated"]) - 1, -1, -1):
         # Call the message function with the generated output and key value of i
-        message(st.session_state["generated"][i], key=str(i), is_user=True) 
+        message(st.session_state["generated"][i], key=str(i)) 
         # Call the message function with the user input and key value of i + "_user", with is_user flag set to True
-        message(st.session_state["past"][i], key=str(i) + "_user")
+        message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
