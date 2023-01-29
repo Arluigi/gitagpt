@@ -54,8 +54,6 @@ if user_input:
     # Append the formatted answer and sources to the "generated" list in the session state
     st.session_state.generated.append(output)
 
-st.empty(height=300)
-
 # Check if the "generated" list in the session state is not empty
 if st.session_state["generated"]:
     # Loop through the list of generated outputs in reverse order
