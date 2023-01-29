@@ -32,13 +32,6 @@ if "past" not in st.session_state:
     # If not, initialize an empty list in the session state with key "past"
     st.session_state["past"] = []
 
-# Define a function to get the user input text
-def get_text():
-    # Add a text input field to the Streamlit UI with label "You:"
-    input_text = st.text_input("You: ", "Give me a summary of the bhagvad Geeta along with the main characters", key="input")
-    # Return the user input text
-    return input_text
-
 # Call the function to get the user input
 user_input = get_text()
 
@@ -53,6 +46,13 @@ if user_input:
     st.session_state.past.append(user_input)
     # Append the formatted answer and sources to the "generated" list in the session state
     st.session_state.generated.append(output)
+
+# Define a function to get the user input text
+def get_text():
+    # Add a text input field to the Streamlit UI with label "You:"
+    input_text = st.text_input("You: ", "Give me a summary of the bhagvad Geeta along with the main characters", key="input")
+    # Return the user input text
+    return input_text
 
 # Check if the "generated" list in the session state is not empty
 if st.session_state["generated"]:
