@@ -35,9 +35,8 @@ if "past" not in st.session_state:
 # Define a function to get the user input text
 def get_text():
     # Add a text input field to the Streamlit UI with label "You:"
-    input_text = st.text_input("You: ", "Give me a summary of the bhagvad Geeta along with the main characters", key="input")
-    st.set_page_config(page_height=1000)
     st.text("")
+    input_text = st.text_input("You: ", "Give me a summary of the bhagvad Geeta along with the main characters", key="input")
     # Return the user input text
     return input_text
 
