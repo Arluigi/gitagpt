@@ -32,8 +32,6 @@ if "past" not in st.session_state:
     # If not, initialize an empty list in the session state with key "past"
     st.session_state["past"] = []
 
-# Call the function to get the user input
-user_input = get_text()
 
 # Check if the user input is not None
 if user_input:
@@ -53,6 +51,9 @@ def get_text():
     input_text = st.text_input("You: ", "Give me a summary of the bhagvad Geeta along with the main characters", key="input")
     # Return the user input text
     return input_text
+
+# Call the function to get the user input
+user_input = get_text()
 
 # Check if the "generated" list in the session state is not empty
 if st.session_state["generated"]:
